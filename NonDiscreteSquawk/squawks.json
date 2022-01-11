@@ -1,0 +1,17 @@
+{
+   "NonDiscreteColor":"#FF00FF",
+   "NonDiscreteMessage":"NDSSR",
+   "NonDiscrete":[
+      "1200",
+      "2000",
+      "2200",
+      "0000"
+   ],
+   "Squawks":[
+      {
+         "code":"7740",
+         "message":"FIS",
+         "color":"#FF0000"
+      }
+   ]
+}
