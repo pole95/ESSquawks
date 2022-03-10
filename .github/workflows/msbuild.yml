@@ -18,7 +18,7 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
 
     - name: Add MSBuild to PATH
       uses: microsoft/setup-msbuild@v1.0.2
@@ -32,6 +32,6 @@ jobs:
       uses: softprops/action-gh-release@v1
       with:
           files: |
-            ${{GITHUB_WORKSPACE}}/Release/Squawks.dll
-            ${{GITHUB_WORKSPACE}}/NonDiscreteSquawk/squawks.json
+            Release/Squawks.dll
+            NonDiscreteSquawk/squawks.json
             LICENSE
