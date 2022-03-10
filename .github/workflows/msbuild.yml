@@ -32,6 +32,6 @@ jobs:
       uses: softprops/action-gh-release@v1
       with:
           files: |
-            ${{env.GITHUB_WORKSPACE}}/Release/Squawks.dll
-            ${{env.GITHUB_WORKSPACE}}/NonDiscreteSquawk/squawks.json
+            ${{GITHUB_WORKSPACE}}/Release/Squawks.dll
+            ${{GITHUB_WORKSPACE}}/NonDiscreteSquawk/squawks.json
             LICENSE
