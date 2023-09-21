@@ -71,7 +71,18 @@ void CNonDiscreteSquawk::loadJson() {
 		int r, g, b;
 		sscanf_s(s["color"].get<std::string>().c_str(), "#%02x%02x%02x", &r, &g, &b);
 		COLORREF color = RGB(r, g, b);
-		squawks.emplace_back(s["code"], s["message"], color);
+		if (s.contains("range")) {
+			auto rangestart = s["range"]["start"].get<std::string>();
+			auto rangeend = s["range"]["end"].get<std::string>();
+			for (int squawk = std::stoi(rangestart); squawk <= std::stoi(rangeend); squawk++) {
+				std::stringstream ss;
+				ss << std::setw(4) << std::setfill('0') << squawk;
+				squawks.emplace_back(ss.str(), s["message"], color);
+			}
+		}
+		else {
+			squawks.emplace_back(s["code"], s["message"], color);
+		}
 	}
 
 	f.close();

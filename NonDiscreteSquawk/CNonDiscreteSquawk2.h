@@ -7,7 +7,7 @@
 #include "json.hpp"
 
 #define PLUGIN_NAME "Squawk Message/Warning"
-#define PLUGIN_VERSION "1.0"
+#define PLUGIN_VERSION "1.0.1"
 #define PLUGIN_AUTHOR "Pol Eyschen"
 #define PLUGIN_LICENSE "GPL v3"
 
